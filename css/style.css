@@ -5,13 +5,10 @@
 }
 
 body{
-    background-color: #141922;
-    font-family: 'Fredoka', sans-serif;
     font-family: 'Montserrat', sans-serif;
 }
 
 .space-nav-element{
-    font-size: 1em;
     padding-left: 30px;
 }
 
@@ -38,9 +35,9 @@ header #nav-spotify{
     position: fixed;
     top: 0;
     left: 0;
-    right: 80%;
     z-index: 3;
-    height: calc(100% - 82.5px);
+    min-width: 192px;
+    min-height: calc(100% - 82.5px);
     background-color: #000000;
 }
 
@@ -83,21 +80,26 @@ header #nav-spotify .nav-top .playlist .title-nav{
 header #nav-spotify .nav-top .playlist .new-playlist{
     display: flex;
     align-items: center;
-    font-size: 1.2em;
+    font-size: 1em;
     padding-bottom: 10px;
 }
 
 header #nav-spotify .nav-top .playlist .new-playlist .fa-solid{
-    font-size: 2.4em;
+    font-size: 2em;
 }
 
 header #nav-spotify .nav-top .playlist .new-playlist span{
     padding-left: 25px;
 }
 
+header #nav-spotify .nav-top .playlist .name-playlist{
+    font-size: 0.9em;
+}
+
 header #nav-spotify .nav-bottom .download-app{
     color: #757575;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: 0.8em;
 }
 
 header #nav-spotify .nav-bottom hr{
@@ -106,9 +108,10 @@ header #nav-spotify .nav-bottom hr{
 }
 
 header #nav-spotify .nav-bottom .my-profile{
+    font-size: 0.9em;
     color: white;
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 10px;
 }
 
 header #nav-spotify .nav-bottom .my-profile .fa-regular{
@@ -125,7 +128,7 @@ header #upgrade-container{
     position: fixed;
     top: 0;
     right: 0;
-    left: 20%;
+    left: 192px;
     z-index: 2;
     height: 100px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -149,7 +152,7 @@ header #upgrade-container .btn-upgrade{
 
 
 /* footer */
-footer #nav-song-container{
+footer #footer-song-container{
     position: fixed;
     bottom: 0;
     left: 0;
@@ -162,22 +165,127 @@ footer #nav-song-container{
     background-color: #282828;
 }
 
-footer #nav-song-container .song{
-    height: 70%;
-    width: 20%;
-    background-color: #e7e3e1;
-/* /test */
-}
-
-footer #nav-song-container .song-navigation{
+footer #footer-song-container .footer-song{
+    display: flex;
+    justify-content: space-between;
     height: 80%;
-    width: 35%;
-    background-color: #e7e3e1;
+    width: 20%;
+    max-width: 20%;
+    min-width: 80px;
 }
 
-footer #nav-song-container .volume-container{
-    height: 70%;
+footer #footer-song-container .footer-song .song-playing{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+footer #footer-song-container .footer-song .song-playing .img-footer-container{
+    height: 100%;
+}
+
+footer #footer-song-container .footer-song .song-playing .img-footer-container img{
+    height: 100%;
+}
+
+footer #footer-song-container .footer-song .song-playing .song-details-footer .song{
+    color: white;
+}
+
+footer #footer-song-container .footer-song .song-playing .song-details-footer .artist{
+    color: #878787;
+    font-size: 0.7em;
+}
+
+footer #footer-song-container .footer-song .like-song{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: 1.3em;
+    color: #878787;
+}
+
+footer #footer-song-container .song-navigation{
+    width: 40%;
+    min-width: 200px;
+}
+
+footer #footer-song-container .song-navigation .btns-song-navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 50%;
+    font-size: 1.5em;
+    padding-bottom: 5px;
+    color: white;
+}
+
+footer #footer-song-container .song-navigation .btns-song-navigation > :nth-child(3){
+    font-size: 1.5em;
+}
+
+footer #footer-song-container .song-navigation .bar-song-navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+footer #footer-song-container .song-navigation .bar-song-navigation .song-duration{
+    color: white;
+}
+
+footer #footer-song-container .song-navigation .bar-song-navigation .total-playback-song{
+    width: 100%;
+    height: 4px;
+    background-color: #878787;
+}
+
+footer #footer-song-container .song-navigation .bar-song-navigation .current-playback-song{
+    width: 25%;
+    height: 4px;
+    background-color: #c1c1c1;
+}
+
+footer #footer-song-container .volume-container{
+    display: flex;
+    align-items: center;
     width: 20%;
-    background-color: #e7e3e1;
+    max-width: 20%;
+    min-width: 80px;
+}
+
+footer #footer-song-container .volume-container .btns-volume-container{
+    color: white;
+}
+
+footer #footer-song-container .volume-container .btns-volume-container .fa-solid{
+    padding-right: 5px;
+}
+
+footer #footer-song-container .volume-container .bar-total-volume{
+    width: 60%;
+    height: 4px;
+    background-color: #878787;
+}
+
+footer #footer-song-container .volume-container .bar-current-volume{
+    width: 25%;
+    height: 4px;
+    background-color: #c1c1c1;
 }
 /* /footer */
+
+
+/* test */
+main{
+    position: fixed;
+    top: 0;
+    bottom: 82.5px;
+    left: 192px;
+    right: 0;
+    background-color: #141922;
+}
